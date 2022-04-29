@@ -1,0 +1,204 @@
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  background-color: var(--background);
+  color: var(--text-base);
+  font-family: 'Poppins', sans-serif; 
+  box-sizing: border-box;
+}
+
+.logo {
+  margin-top: 2.5rem;
+  margin-left: 2.5rem;
+}
+
+.container {
+  position: relative;
+  right: 6.5vw;
+  margin: auto;
+  max-width: 55%;
+  padding: 30px 80px;
+  background-color: var(--form-background);
+  box-sizing: border-box;
+}
+
+.sideImage {
+  min-width: 45%;
+  height: 100vh;
+}
+
+h3 {
+  color: var(--text-title);
+}
+
+.headerLogin {
+  display: flex;
+  gap: 0.5em;
+}
+
+p {
+  margin-bottom: 0.8em;
+}
+
+.email, .password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5em;
+}
+
+.rememberPassword a, p:last-child, a:last-child {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.rememberPassword strong {
+  padding-left: 50px;
+}
+
+.formInput {
+  background-color: var(--form-background);
+  box-sizing: border-box;
+  border: 1.5px solid var(--text-base);
+  border-radius: 5px;
+  height: 6vh;
+  color: var(--text-base);
+}
+
+/* Acesso o input de tipo email, incluo a imagem, posiciono e retiro o contorno */
+input[type=email] {
+  background-image: url('images/mail.svg');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 5px;
+  padding-left: 30px;
+  outline: none;
+}
+
+input[type=email]:focus {
+  background-image: url(images/mail-focus.svg);
+  border: 2px solid var(--primary-color);
+}
+
+input[type=password] {
+  background-image: url(images/lock.svg);
+  background-repeat: no-repeat;
+  background-position: 5px;
+  padding-left: 30px;
+  outline: none;
+}
+
+input[type=password]:focus {
+  background-image: url(images/lock-focus.svg);
+  border: 2px solid var(--primary-color);
+}
+
+.eye {
+  background-image: url(/images/eye.svg);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 12.5rem;
+  right: 5.8rem;
+  cursor: pointer;
+}
+
+.checkbox {
+  display: none;
+}
+
+/* Crio o checkbox o inserindo antes do conteúdo de label */
+.checkbox + label:before {
+  content: '';
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-top: 0.7rem;
+  margin-right: 0.3rem;
+  margin-bottom: -0.2rem;
+  border-radius: 4px;
+  border: 1px solid var(--text-base);
+}
+
+.checkbox:checked + label:before {
+  background-color: var(--primary-color);
+  background-image: url(images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid var(--primary-color);
+}
+
+button {
+  font-family: 'Poppins', sans-serif; 
+  font-size: large;
+  font-weight: bolder;
+  color: #473404;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  width: 100%;  
+  height: 10vh;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+p:last-child {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1em;
+}
+
+a:last-child {
+  padding-left: 5px;
+}
+
+@media (max-width: 430px) and (min-width: 390px) {
+  body {
+    background-color: var(--form-background);
+  }
+
+  .sideImage {
+    display: none;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 0;
+    margin-left: -100px;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    max-width: 80vw;
+  }
+
+  p {
+    font-size: 13.5px;
+  }
+
+  .rememberPassword a {
+    font-size: 12.2px;
+  }
+
+  .eye {
+    position: absolute;
+    top: 185px;
+    left: 285px;
+  }
+
+}
