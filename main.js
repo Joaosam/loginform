@@ -19,5 +19,5 @@ function displayPassword() {
 }
 
 function entrar() {
-  window.open('window.html')
+  window.open('window.html','_self')
 }
