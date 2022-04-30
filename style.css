@@ -20,16 +20,17 @@ body {
 }
 
 .logo {
-  margin-top: 2.5rem;
-  margin-left: 2.5rem;
+  margin-top: 5vh;
+  margin-left: 2vw;
 }
 
 .container {
   position: relative;
+  top: 5vh;
   right: 6.5vw;
   margin: auto;
   max-width: 55%;
-  padding: 30px 80px;
+  padding: 5vh 5vw;
   background-color: var(--form-background);
   box-sizing: border-box;
 }
@@ -66,6 +67,7 @@ p {
 
 .rememberPassword strong {
   padding-left: 50px;
+  width: 100vw;
 }
 
 .formInput {
@@ -110,8 +112,8 @@ input[type=password]:focus {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 12.5rem;
-  right: 5.8rem;
+  top: 32.5vh;
+  left: 28vw;
   cursor: pointer;
 }
 
@@ -168,9 +170,48 @@ a:last-child {
   padding-left: 5px;
 }
 
-@media (max-width: 760px) and (min-width: 390px) {
+/* Desktop larger */
+@media (max-width: 1920px) and (min-width: 761px) {
+  body {
+    /* background-color: var(--form-background); */
+    margin-left: 10vw;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 5vh 5vw;
+    margin-left: -100px;
+    position: relative;
+    top: 15vh;
+    width: 100%;
+    max-width: 80vw;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .rememberPassword strong {
+    /* padding-left: 30px; */
+    font-size: 10.6px;
+    width: 100%;
+    
+  }
+
+  .rememberPassword label {
+    font-size: 13px;
+  }
+
+  .eye {
+    top: 30.5vh;
+    left: 43vw;
+  }
+}
+
+@media (max-width: 760px) and (min-width: 431px) {
   body {
     background-color: var(--form-background);
+    margin-left: 5vw;
   }
 
   .sideImage {
@@ -182,23 +223,146 @@ a:last-child {
     padding: 0;
     margin-left: -100px;
     position: relative;
-    top: 100px;
+    top: 15vh;
     width: 100%;
     max-width: 80vw;
   }
 
   p {
-    font-size: 13.5px;
+    font-size: 15px;
   }
 
-  .rememberPassword a {
-    font-size: 12.2px;
+  .rememberPassword strong {
+    /* padding-left: 30px; */
+    font-size: 10.6px;
+    width: 100%;
+    
+  }
+
+  .rememberPassword label {
+    font-size: 13px;
   }
 
   .eye {
-    position: absolute;
-    top: 185px;
-    left: 285px;
+    top: 30.5vh;
+    left: 70vw;
+  }
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+  body {
+    background-color: var(--form-background);
+    margin-left: 5vw;
   }
 
+  .sideImage {
+    display: none;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 0;
+    margin-left: -100px;
+    position: relative;
+    top: 15vh;
+    width: 100%;
+    max-width: 80vw;
+  }
+
+  p {
+    font-size: 11.5px;
+  }
+
+  .rememberPassword strong {
+    padding-left: 30px;
+    font-size: 10.6px;
+  }
+
+  .rememberPassword label {
+    font-size: 13px;
+  }
+
+  .eye {
+    top: 28.6vh;
+    left: 70vw;
+  }
+}
+
+@media (max-width:390px) and (min-width:340px) {
+  body {
+    background-color: var(--form-background);
+    margin-left: 5vw;
+  }
+
+  .sideImage {
+    display: none;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 0;
+    margin-left: -100px;
+    position: relative;
+    top: 15vh;
+    width: 100%;
+    max-width: 80vw;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .rememberPassword strong {
+    padding-left: 15px;
+    font-size: 12px;
+  }
+
+  .rememberPassword label {
+    font-size: 14px;
+  }
+
+  .eye {
+    top: 30vh;
+    left: 70vw;
+  }
+}
+
+@media (max-width:430px) and (min-width:391px) {
+  body {
+    background-color: var(--form-background);
+    margin-left: 5vw;
+  }
+
+  .sideImage {
+    display: none;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 0;
+    margin-left: -100px;
+    position: relative;
+    top: 15vh;
+    width: 100%;
+    max-width: 80vw;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .rememberPassword strong {
+    padding-left: 60px;
+    font-size: 12.5px;
+  }
+
+  .rememberPassword label {
+    font-size: 13px;
+  }
+
+  .eye {
+    top: 30vh;
+    left: 70vw;
+  }
 }
