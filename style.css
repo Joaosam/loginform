@@ -17,11 +17,14 @@ body {
   color: var(--text-base);
   font-family: 'Poppins', sans-serif; 
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 .logo {
-  margin-top: 5vh;
-  margin-left: 2vw;
+  margin-top: 4vh;
+  position: relative;
+  left: 3vw;
 }
 
 .container {
@@ -30,6 +33,7 @@ body {
   right: 6.5vw;
   margin: auto;
   max-width: 55%;
+  height: 70vh;
   padding: 5vh 5vw;
   background-color: var(--form-background);
   box-sizing: border-box;
@@ -65,9 +69,21 @@ p {
   font-size: 15px;
 }
 
+.rememberPassword {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:baseline;
+}
+
 .rememberPassword strong {
   padding-left: 50px;
   width: 100vw;
+  font-size: 13px;
+}
+
+.rememberPassword a strong {
+  font-size: 13px;
 }
 
 .formInput {
@@ -107,13 +123,19 @@ input[type=password]:focus {
   border: 2px solid var(--primary-color);
 }
 
+.password {
+  position: relative;
+}
+
 .eye {
   background-image: url(images/eye.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 16px;
   position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 32.5vh;
-  left: 28vw;
+  bottom: 0.65rem;
+  left: 18.5rem;
   cursor: pointer;
 }
 
@@ -122,7 +144,7 @@ input[type=password]:focus {
 }
 
 /* Crio o checkbox o inserindo antes do conteúdo de label */
-.checkbox + label:before {
+.checkbox + label::before {
   content: '';
   display: inline-block;
   width: 17px;
@@ -132,9 +154,10 @@ input[type=password]:focus {
   margin-bottom: -0.2rem;
   border-radius: 4px;
   border: 1px solid var(--text-base);
+  cursor: pointer;
 }
 
-.checkbox:checked + label:before {
+.checkbox:checked + label::before {
   background-color: var(--primary-color);
   background-image: url(images/check.svg);
   background-repeat: no-repeat;
@@ -157,6 +180,11 @@ button {
   height: 10vh;
   margin-top: 1em;
   cursor: pointer;
+  text-transform: uppercase;
+}
+
+a button {
+  text-decoration: none;
 }
 
 p:last-child {
@@ -170,126 +198,7 @@ a:last-child {
   padding-left: 5px;
 }
 
-/* Desktop larger */
-@media (max-width: 1920px) and (min-width: 761px) {
-  body {
-    /* background-color: var(--form-background); */
-    margin-left: 10vw;
-  }
-
-  .container {
-    margin: 20px;
-    padding: 5vh 5vw;
-    margin-left: -100px;
-    position: relative;
-    top: 15vh;
-    width: 100%;
-    max-width: 80vw;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
-  .rememberPassword strong {
-    /* padding-left: 30px; */
-    font-size: 10.6px;
-    width: 100%;
-    
-  }
-
-  .rememberPassword label {
-    font-size: 13px;
-  }
-
-  .eye {
-    top: 30.5vh;
-    left: 43vw;
-  }
-}
-
-@media (max-width: 760px) and (min-width: 431px) {
-  body {
-    background-color: var(--form-background);
-    margin-left: 5vw;
-  }
-
-  .sideImage {
-    display: none;
-  }
-
-  .container {
-    margin: 20px;
-    padding: 0;
-    margin-left: -100px;
-    position: relative;
-    top: 15vh;
-    width: 100%;
-    max-width: 80vw;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
-  .rememberPassword strong {
-    /* padding-left: 30px; */
-    font-size: 10.6px;
-    width: 100%;
-    
-  }
-
-  .rememberPassword label {
-    font-size: 13px;
-  }
-
-  .eye {
-    top: 30.5vh;
-    left: 70vw;
-  }
-}
-
-/* Mobile */
-@media (max-width: 320px) {
-  body {
-    background-color: var(--form-background);
-    margin-left: 5vw;
-  }
-
-  .sideImage {
-    display: none;
-  }
-
-  .container {
-    margin: 20px;
-    padding: 0;
-    margin-left: -100px;
-    position: relative;
-    top: 15vh;
-    width: 100%;
-    max-width: 80vw;
-  }
-
-  p {
-    font-size: 11.5px;
-  }
-
-  .rememberPassword strong {
-    padding-left: 30px;
-    font-size: 10.6px;
-  }
-
-  .rememberPassword label {
-    font-size: 13px;
-  }
-
-  .eye {
-    top: 28.6vh;
-    left: 70vw;
-  }
-}
-
-@media (max-width:390px) and (min-width:340px) {
+@media (max-width:391px) and (min-width:340px) {
   body {
     background-color: var(--form-background);
     margin-left: 5vw;
@@ -323,46 +232,8 @@ a:last-child {
   }
 
   .eye {
-    top: 24vh;
-    left: 70vw;
+    top: 2.5rem;
+    right: -3rem;
   }
 }
 
-@media (max-width:430px) and (min-width:391px) {
-  body {
-    background-color: var(--form-background);
-    margin-left: 5vw;
-  }
-
-  .sideImage {
-    display: none;
-  }
-
-  .container {
-    margin: 20px;
-    padding: 0;
-    margin-left: -100px;
-    position: relative;
-    top: 15vh;
-    width: 100%;
-    max-width: 80vw;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  .rememberPassword strong {
-    padding-left: 60px;
-    font-size: 12.5px;
-  }
-
-  .rememberPassword label {
-    font-size: 13px;
-  }
-
-  .eye {
-    top: 30vh;
-    left: 70vw;
-  }
-}
