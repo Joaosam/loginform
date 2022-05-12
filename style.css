@@ -1,4 +1,6 @@
 :root {
+  font-size: 62.5%;
+
   --text-base: #afb6c2;
   --text-title: #d4ccb6;
   --background: #191816;
@@ -9,6 +11,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,15 +19,17 @@ body {
   background-color: var(--background);
   color: var(--text-base);
   font-family: 'Poppins', sans-serif; 
-  box-sizing: border-box;
+  
   width: 100%;
   height: 100%;
+
+  font-size: 1.6rem;
 }
 
 .logo {
-  margin-top: 4vh;
-  position: relative;
-  left: 3vw;
+  margin-top: 4rem;
+  margin-left: 4rem;
+  margin-bottom: 12.6rem;
 }
 
 .container {
@@ -33,10 +38,9 @@ body {
   right: 6.5vw;
   margin: auto;
   max-width: 55%;
-  height: 70vh;
-  padding: 5vh 5vw;
+  height: auto;
+  padding: 5.5rem 11.8rem;
   background-color: var(--form-background);
-  box-sizing: border-box;
 }
 
 .sideImage {
@@ -46,6 +50,8 @@ body {
 
 h3 {
   color: var(--text-title);
+
+  font-size: 2.4rem;
 }
 
 .headerLogin {
@@ -55,6 +61,7 @@ h3 {
 
 p {
   margin-bottom: 0.8em;
+  font-size: 1.6rem;
 }
 
 .email, .password {
@@ -83,12 +90,11 @@ p {
 }
 
 .rememberPassword a strong {
-  font-size: 13px;
+  font-size: 1.4rem;
 }
 
 .formInput {
   background-color: var(--form-background);
-  box-sizing: border-box;
   border: 1.5px solid var(--text-base);
   border-radius: 5px;
   height: 6vh;
@@ -131,11 +137,13 @@ input[type=password]:focus {
   background-image: url(images/eye.svg);
   background-position: center;
   background-repeat: no-repeat;
-  width: 22px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
+
   position: absolute;
-  bottom: 0.65rem;
-  left: 18.5rem;
+  right: 5%;
+  top: 55%;
+
   cursor: pointer;
 }
 
@@ -168,17 +176,19 @@ input[type=password]:focus {
 .enterHome {
   text-decoration: none;
   font-family: 'Poppins', sans-serif; 
-  font-size: large;
+  font-size: 1.8rem;
   font-weight: bolder;
   color: #473404;
   display: flex;
   justify-content: center;
+  padding-block: 1.2rem;
   align-items: center;
   background-color: var(--primary-color);
   border: none;
   border-radius: 5px;
   width: 100%;  
-  height: 10vh;
+  width: 100%;  
+  max-height: 5.1rem;
   margin-top: 1em;
   cursor: pointer;
   text-transform: uppercase;
@@ -189,47 +199,52 @@ p:last-child {
   justify-content: center;
   text-align: center;
   margin-top: 1em;
+
+  font-size: 1.4rem;
 }
 
 a:last-child {
   padding-left: 5px;
+  font-size: 1.4rem;
 }
 
-@media (max-width:391px) and (min-width:340px) {
+@media (max-width:425px) and (min-width:320px) {
   body {
     background-color: var(--form-background);
-    margin-left: 5vw;
-  }
+    display: flex;
+    flex-direction: column;
 
+    width: 100vw;
+  }
+  
   .sideImage {
     display: none;
   }
 
+  .logo { 
+    margin-left: 2.8rem;
+    margin-bottom: 0;
+  }
+
   .container {
-    margin: 20px;
-    padding: 0;
-    margin-left: -100px;
+    padding: 0 0 0 5rem;
     position: relative;
-    top: 15vh;
     width: 100%;
-    max-width: 80vw;
+    max-width: 95vw;
+
+    top: 3rem;
   }
 
   p {
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 
   .rememberPassword strong {
-    padding-left: 15px;
-    font-size: 12px;
+    padding-left: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .rememberPassword label {
-    font-size: 14px;
-  }
-
-  .eye {
-    top: 2.5rem;
-    right: -3rem;
+    font-size: 1.4rem;
   }
 }
