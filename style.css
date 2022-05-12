@@ -165,7 +165,8 @@ input[type=password]:focus {
   border: 1px solid var(--primary-color);
 }
 
-button {
+.enterHome {
+  text-decoration: none;
   font-family: 'Poppins', sans-serif; 
   font-size: large;
   font-weight: bolder;
@@ -181,10 +182,6 @@ button {
   margin-top: 1em;
   cursor: pointer;
   text-transform: uppercase;
-}
-
-.enterHome {
-  text-decoration: none;
 }
 
 p:last-child {
@@ -236,4 +233,3 @@ a:last-child {
     right: -3rem;
   }
 }
-
