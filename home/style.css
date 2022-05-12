@@ -44,3 +44,9 @@ h2 {
   color: #ffc632;
   text-transform: uppercase;
 }
+
+@media (max-width:425px) and (min-width:320px) {  
+  .box {
+    width: 70vw;
+  }
+}
