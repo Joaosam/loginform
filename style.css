@@ -26,12 +26,6 @@ body {
   font-size: 1.6rem;
 }
 
-.logo {
-  margin-top: 4rem;
-  margin-left: 4rem;
-  margin-bottom: 12.6rem;
-}
-
 .container {
   position: relative;
   top: 5vh;
@@ -46,6 +40,12 @@ body {
 .sideImage {
   min-width: 45%;
   height: 100vh;
+}
+
+.logo {
+  margin-top: 4rem;
+  margin-left: 4rem;
+  margin-bottom: 12.6rem;
 }
 
 h3 {
@@ -208,7 +208,11 @@ a:last-child {
   font-size: 1.4rem;
 }
 
-@media (max-width:425px) and (min-width:320px) {
+@media (max-width:1024px) {
+  
+}
+
+@media (min-width:320px) and (max-width:768px) {
   body {
     background-color: var(--form-background);
     display: flex;
