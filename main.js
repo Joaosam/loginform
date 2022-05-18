@@ -17,7 +17,3 @@ function displayPassword() {
     password.style.outline = 'none'
   }
 }
-
-function entrar() {
-  window.open('window.html')
-}
